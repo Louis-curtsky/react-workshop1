@@ -3,7 +3,7 @@ import React from 'react';
 
 export const TableRow = props => (
     <div  key={props.id}>
-            <td>
+            <td scope='row'>
                 {props.id}
             </td>
             <td>

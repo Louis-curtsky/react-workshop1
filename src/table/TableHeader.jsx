@@ -1,25 +1,24 @@
 
 export const TableHeader = () => {
     return (
-        <tr className="tableHeader">
-<th>
+<tr>
+<th scope='col'>
     ID
 </th>
-<th>
+<th scope='col'>
     First Name
 </th>
-<th>
+<th scope='col'>
     Last Name
 </th>
-<th>
+<th scope='col'>
     Age
 </th>
-<th>
-    Gender
+<th scope='col'>
+    Action
 </th>
 <th>
     Actions
 </th>
-
-        </tr>
+</tr>
     )};

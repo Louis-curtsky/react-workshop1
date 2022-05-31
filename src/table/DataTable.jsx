@@ -1,4 +1,4 @@
-
+import { MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
 import { TableHeader } from "./TableHeader";
 import studentList from "./StudentList";
 import {TableRow} from "./TableRow";
@@ -14,16 +14,20 @@ export default function DataTable() {
     // functionconponent that returns table header
 
     return (
-        <table>
-            <thead>
+        <MDBTable Hover>
+            <MDBTableHead>
+                <tr>
             <TableHeader/>
-            </thead>
-            <tbody>
+                </tr>
+            </MDBTableHead>
+            <MDBTableBody>
+                <tr>
                 {studentList.map(data => (
                     <TableRow {... data} />
                 ))}      
-            </tbody>
-        </table>
+                </tr>
+            </MDBTableBody>
+        </MDBTable>
     );
 }
 

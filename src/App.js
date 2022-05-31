@@ -11,7 +11,7 @@ function App() {
       </h1>
       <hr/>
         <div>
-        <DataTable/>
+        {/* <DataTable/> */}
         </div>
     </div>
   );
