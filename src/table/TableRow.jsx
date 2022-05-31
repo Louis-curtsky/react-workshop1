@@ -1,30 +1,23 @@
-import { StudentList } from "./StudentList";
 import React from 'react';
 
 
-function TableRow ({id,first_name,last_name,age,gender}) {
-    return (
-        <div>
-        {StudentList.map(data=>
-            <div>
-                <div>
-                {data.id}
-                </div>
-                <div>
-                {data.first_name}
-                </div>
-                <div>
-                {data.last_name}
-                </div>
-                <div>
-                {data.age}
-                </div>
-                <div>
-                {data.gender}
-                </div>
-            </div>
-        )}
-    </div>
-            )
-}
-export default TableRow;
+export const TableRow = props => (
+    <div  key={props.id}>
+            <td>
+                {props.id}
+            </td>
+            <td>
+                {props.first_name}
+            </td>
+            <td>
+                {props.last_name}
+            </td>
+            <td>
+                {props.age}
+            </td>
+            <td>
+                {props.gender}
+            </td>
+        </div>
+);
+            
