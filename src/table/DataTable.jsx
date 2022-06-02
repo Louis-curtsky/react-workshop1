@@ -1,33 +1,33 @@
-import { MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
 import { TableHeader } from "./TableHeader";
 import studentList from "./StudentList";
-import {TableRow} from "./TableRow";
+import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
+import React from "react";
 
 
-export default function DataTable() {
+export default function DataTable(data) {
 
-    // the initial state with objects containing the student data/properties.
-    
-
-    // showDetails state for displaying student details with a boolean,the button onclick function displayData returns a true value and the properties
-
-    // functionconponent that returns table header
-
+    const clickHandle = item => {
+        this.setState({item: data.id});
+        console.log(data.id);
+    };
     return (
-        <MDBTable Hover>
-            <MDBTableHead>
-                <tr>
+        <Table striped bordered hover size="sm">    
             <TableHeader/>
-                </tr>
-            </MDBTableHead>
-            <MDBTableBody>
-                <tr>
+            <tbody>
                 {studentList.map(data => (
-                    <TableRow {... data} />
-                ))}      
+                <tr key={data.id}>
+                    <td>{data.id}</td>
+                    <td>{data.first_name}</td>
+                    <td>{data.last_name}</td>
+                    <td>{data.age}</td>
+                    <td> <Button variant="outline-primary" type='button'
+                    onClick={e=>clickHandle(data)}>Details</Button></td>
+                    
                 </tr>
-            </MDBTableBody>
-        </MDBTable>
+                ))}      
+            </tbody>
+        </Table>
     );
 }
 

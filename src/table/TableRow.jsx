@@ -1,11 +1,13 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 
 
 export const TableRow = props => (
     <div  key={props.id}>
-            <td scope='row'>
+            <tr>
+            <th>
                 {props.id}
-            </td>
+            </th>
             <td>
                 {props.first_name}
             </td>
@@ -18,6 +20,10 @@ export const TableRow = props => (
             <td>
                 {props.gender}
             </td>
+            <td>
+                <Button variant="outline-primary" type='button'>Details</Button>
+            </td>
+            </tr>
         </div>
 );
             
