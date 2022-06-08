@@ -1,31 +1,17 @@
-import Table from 'react-bootstrap/Table';
+import Card from 'react-bootstrap/Card';
 
-export const DisplayDetail = (id, first_name, last_name, age)=>(onclick)=> {
+function DisplayDetail ({item}) {
+
+  console.log("Detail: "+item);
 return(
-    <div>
-        <Table>
-            <thead>
-                <tr>
-                <th>ID</th>
-                <td>{id}</td>
-                </tr>
-                <tr>
-                <th>First Name</th>
-                <td>-</td>
-                </tr>
-                <tr>
-                <th>Last Name</th>
-                <td>-</td>
-                </tr>
-                <tr>
-                <th>Age</th>
-                <td>-</td>
-                </tr>
-                <tr>
-                <th>Gender</th>
-                <td>-</td>
-                </tr>
-            </thead>
-        </Table>
-        </div>
-)};
+  <Card border="primary" style="max-width: 18rem;">
+  <Card.Header></Card.Header>
+  <Card.Body>
+      <Card.Title></Card.Title>
+      <Card.Text></Card.Text>
+      <Card.Text></Card.Text>
+  </Card.Body>
+  </Card>
+);}
+
+export default DisplayDetail;

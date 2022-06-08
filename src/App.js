@@ -1,9 +1,14 @@
 import './App.css';
 import DataTable from './table/DataTable';
-import React from "react";
 
 
-function App() {
+
+function App() { 
+  const showStudentDataHandler = (enteredStudentData) => {
+    const studentData = {
+      ...enteredStudentData
+    };
+  };
 
   return (
     <div className="App">
@@ -15,10 +20,9 @@ function App() {
       <h3>Reserve for Queries</h3>
       </div>
         <div>
-        <DataTable/>
+        <DataTable onStudentDetail = {showStudentDataHandler}/>
         </div>
     </div>
-  );
-}
-
+    );
+  }
 export default App;
