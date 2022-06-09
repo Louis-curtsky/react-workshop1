@@ -1,8 +1,6 @@
 import { TableHeader } from "./TableHeader";
 import studentList from "./StudentList";
-import Card from "react-bootstrap/Card";
-import Table from "react-bootstrap/Table";
-import Button from "react-bootstrap/Button";
+import {Button, Table, Card} from "react-bootstrap";
 import { useState } from "react";
 
 const DataTable = (props) => {
@@ -11,7 +9,6 @@ const DataTable = (props) => {
         setStudent(data);
     };
   props.onStudentDetail(item);
-  console.log(item);
 
   return (
     <div>

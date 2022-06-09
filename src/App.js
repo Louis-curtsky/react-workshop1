@@ -1,13 +1,12 @@
 import './App.css';
 import DataTable from './table/DataTable';
 
-
-
 function App() { 
   const showStudentDataHandler = (enteredStudentData) => {
     const studentData = {
       ...enteredStudentData
     };
+    console.log(studentData);
   };
 
   return (
